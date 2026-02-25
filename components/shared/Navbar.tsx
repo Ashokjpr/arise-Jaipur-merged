@@ -84,7 +84,7 @@ export default function Navbar() {
               Register
             </Link>
             {/* Mobile Toggle */}
-            <button aria-label="Open menu" onClick={() => setOpen(true)} className="md:hidden rounded-lg p-2 hover:bg-gray-100 transition"
+            <button aria-label="Open menu" onClick={() => setOpen(true)} className="md:hidden rounded-lg p-2 text-gray-600 hover:bg-gray-100 transition"
             >
               <Menu />
             </button>
@@ -94,7 +94,7 @@ export default function Navbar() {
       {/* Mobile Overlay */}
       <div className={`fixed inset-0 z-40 bg-black/40 transition-opacity md:hidden ${open ? "opacity-100 visible" : "opacity-0 invisible"}`} onClick={() => { setOpen(false); setMobileCoursesOpen(false); }} />
       {/* Mobile Slide Menu */}
-      <aside className={`fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl transform transition-transform duration-300 md:hidden ${open ? "translate-x-0" : "translate-x-full hidden"}`}
+      <aside className={`fixed top-0 right-0 z-50 h-full w-72 bg-white text-gray-600 shadow-xl transform transition-transform duration-300 md:hidden ${open ? "translate-x-0" : "translate-x-full hidden"}`}
       >
         <div className="flex items-center justify-between px-4 h-16 border-b">
           {!logoError ? (<Image src="/arise-logo.png" alt="Arise Medical Academy Logo" width={120} height={40} onError={() => setLogoError(true)} />) : (<span className="text-lg font-bold text-blue-700">ARISE</span>)}
