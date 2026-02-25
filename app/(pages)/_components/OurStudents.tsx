@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -8,16 +8,16 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 const testimonialData = [
-      {
-    imgSrc: "/images/ANESTHESIA.jpg",
+  {
+    imgSrc: "/images/DrKhaleel.png",
     profession: "MBBS Graduate",
     comment:
-      "Arise Jaipur provided excellent guidance and structured preparation that helped me clear FMGE confidently.",
+      "Arise Kerala provided excellent guidance and structured preparation that helped me clear FMGE confidently.",
     name: "Dr. Ananya S",
     rating: 4.5,
   },
   {
-    imgSrc: "/images/ANESTHESIA.jpg",
+    imgSrc: "/images/DrKhaleel.png",
     profession: "Medical Intern",
     comment:
       "The faculty and study materials are top-notch. Highly recommended for FMGE aspirants.",
@@ -25,7 +25,7 @@ const testimonialData = [
     rating: 5,
   },
   {
-    imgSrc: "/images/ANESTHESIA.jpg",
+    imgSrc: "/images/DrKhaleel.png",
     profession: "FMGE Aspirant",
     comment:
       "Daily tests and doubt sessions made all the difference in my preparation.",
@@ -33,15 +33,15 @@ const testimonialData = [
     rating: 4,
   },
   {
-    imgSrc: "/images/ANESTHESIA.jpg",
+    imgSrc: "/images/DrKhaleel.png",
     profession: "MBBS Graduate",
     comment:
-      "Arise Jaipur provided excellent guidance and structured preparation that helped me clear FMGE confidently.",
+      "Arise Kerala provided excellent guidance and structured preparation that helped me clear FMGE confidently.",
     name: "Dr. Ananya S",
     rating: 4.5,
   },
   {
-    imgSrc: "/images/ANESTHESIA.jpg",
+    imgSrc: "/images/DrKhaleel.png",
     profession: "Medical Intern",
     comment:
       "The faculty and study materials are top-notch. Highly recommended for FMGE aspirants.",
@@ -49,7 +49,7 @@ const testimonialData = [
     rating: 5,
   },
   {
-    imgSrc: "/images/ANESTHESIA.jpg",
+    imgSrc: "/images/DrKhaleel.png",
     profession: "FMGE Aspirant",
     comment:
       "Daily tests and doubt sessions made all the difference in my preparation.",
@@ -59,18 +59,31 @@ const testimonialData = [
 ];
 
 const OurStudents = () => {
+
+  // ✅ FIX: state must be inside component
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) setSlidesToShow(1);
+      else if (window.innerWidth < 1024) setSlidesToShow(2);
+      else setSlidesToShow(3);
+    };
+
+    handleResize(); // run once on mount
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     speed: 600,
-    responsive: [
-      { breakpoint: 1200, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-    ],
   };
 
   const renderStars = (rating: number) => {
@@ -88,7 +101,10 @@ const OurStudents = () => {
           />
         ))}
         {half && (
-          <Icon icon="tabler:star-half-filled" className="text-yellow-500 text-lg" />
+          <Icon
+            icon="tabler:star-half-filled"
+            className="text-yellow-500 text-lg"
+          />
         )}
         {[...Array(empty)].map((_, i) => (
           <Icon
@@ -103,41 +119,33 @@ const OurStudents = () => {
 
   return (
     <section id="testimonial" className="max-w-full">
-      <Image
-        src="/images/rajesthan-bg2.png"
-        alt="Background Image"
-        width={1200}
-        height={400}
-        className="absolute  w-screen h-[482px] object-cover opacity-100"
-      />
-       
-      <div className=" relative bg-white/70 z-10 container mx-auto max-w-7xl pt-10 md:px-10 ">
-        <h2 className="text-2xl md:text-5xl text-blue-900 font-semibold text-center mb-10 text-hover">
-          Hear From Our Students​
-          <hr/>
+          <Image
+            src="/images/rajesthan-bg2.png"
+            alt="Background Image"
+            width={1200}
+            height={400}
+            className="absolute  w-screen h-[482px] object-cover opacity-100"
+          />
+           
+          <div className=" relative bg-white/70 z-10 container mx-auto max-w-7xl pt-10 md:px-10 ">
+        <h2 className="text-2xl md:text-5xl text-blue-900 font-semibold text-center mb-16">
+          Hear From Our Students
         </h2>
-        
 
         <Slider {...settings}>
           {testimonialData.map((item, i) => (
-            <div key={i} className="px-3 " 
-             data-aos="fade-up"
-            data-aos-delay={i * 100}
-            >
-              <div className="bg-white md:h-[250px]  rounded-2xl shadow-xl p-6 relative my-10">
-                
-                {/* Avatar */}
+            <div key={i} className="px-3">
+              <div className="bg-white md:h-[250px] rounded-2xl shadow-xl p-6 relative my-10">
                 <div className="absolute -top-10 left-6">
                   <Image
                     src={item.imgSrc}
                     alt={item.name}
                     width={80}
                     height={80}
-                    className="rounded-full  border-4 border-yellow-100 object-cover"
+                    className="rounded-full border-4 border-yellow-100 object-cover"
                   />
                 </div>
 
-                {/* Content */}
                 <p className="text-gray-600 mt-10 mb-6">
                   “{item.comment}”
                 </p>
@@ -149,7 +157,6 @@ const OurStudents = () => {
                   </div>
                   {renderStars(item.rating)}
                 </div>
-
               </div>
             </div>
           ))}
