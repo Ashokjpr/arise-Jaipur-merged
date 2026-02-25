@@ -9,7 +9,7 @@ import FeaturesSection from "./_components/FeaturesSection";
 
 function page() {
   return (
-    <div className="">
+    <div className="bg-white text-gray-800">
       <Hero />
       <AboutUs />
       <StatsSection />

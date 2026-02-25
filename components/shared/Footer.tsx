@@ -20,11 +20,11 @@ function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#e9ecf7]/20 text-black pt-10 w-full overflow-hidden">
+    <footer className="relative bg-white/70 text-black pt-10 w-full overflow-hidden">
 
       {/* Jaipur Skyline Background */}
       <div
-        className="absolute inset-0 bg-repeat-x bg-bottom opacity-15 pointer-events-none
+        className="absolute inset-0 bg-repeat-x bg-bottom opacity-25 pointer-events-none
         bg-cover md:bg-repeat-x md:bg-auto"
         style={{
           backgroundImage: "url('/images/rajesthan-bg2.png')",

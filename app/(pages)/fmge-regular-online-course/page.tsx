@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 export default function FMGERegularOnlineCourse() {
   return (
     <>
-      <main className="w-full overflow-hidden pb-24">
+      <main className="w-full overflow-hidden pb-24 bg-white text-gray-600">
         {/* HERO SECTION */}
         <section
           className="bg-gradient-to-b from-[#02024d] to-[#000033] text-white py-20 text-center"

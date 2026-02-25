@@ -58,12 +58,12 @@ export default function Faqs() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-xl overflow-hidden"
+              className=" border border-gray-200 rounded-xl overflow-hidden"
             >
               {/* Question */}
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex justify-between items-center px-5 py-4 text-left font-medium text-gray hover:bg-green-50 transition"
+                className=" w-full flex justify-between items-center px-5 py-4 text-left font-medium text-gray-900 hover:bg-green-50 transition"
               >
                 <span>
                   {index + 1}. {faq.q}

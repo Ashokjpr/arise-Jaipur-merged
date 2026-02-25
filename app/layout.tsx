@@ -110,7 +110,7 @@ export default function RootLayout({
             ></div>
 
             {/* MAIN CONTENT WITH PADDING */}
-            <main className="flex-1 ">
+            <main className="flex-1 bg-white text-gray-600">
               {children}
             </main>
 

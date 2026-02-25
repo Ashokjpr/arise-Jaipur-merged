@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const slides = [
-  "/images/webimg-home.png",
-  "/images/webimg-about.png",
   "/images/webimg-success.png",
   "/images/webimg-contacts.png",
+  "/images/webimg-home.png",
+  "/images/webimg-about.png",
   "/images/webimg.png",
   // "/images/webimg.png",
   // "/images/webimg.png",
@@ -99,7 +99,7 @@ export default function WebsiteSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
