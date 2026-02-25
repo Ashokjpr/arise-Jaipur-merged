@@ -107,9 +107,9 @@ export default function Navbar() {
           {navItems.map((item) => {
             if (item === "Courses") {
               return (<div key={item} className="space-y-1">
-                <button onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)} className="w-full text-gray-600 flex items-center justify-between px-3 py-2 font-semibold text-gray-700 hover:bg-blue-50 rounded-lg transition"
+                <button onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)} className={`w-full ${mobileCoursesOpen? "bg-blue-50 font-semibold" :""} text-gray-600 flex items-center justify-between px-3 py-2 hover:bg-blue-50 rounded-lg transition`}
                 >
-                  Courses
+                 Courses
                   <ChevronDown size={14} className={`transition-transform duration-200 ${mobileCoursesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {mobileCoursesOpen && (<div className="ml-4 space-y-1">
