@@ -5,6 +5,7 @@ import AimObjective from "./_components/AimObjective"
 import MissionVision from "./_components/MissionVision"
 import SpecialitiesServices from "./_components/SpecialitiesServices"
 import OurBranches from "./_components/OurBranches"
+import BranchCard from "./_components/BranchCard"
 
 function page() {
   return (
@@ -14,7 +15,8 @@ function page() {
       <AimObjective />
       <MissionVision />
       <SpecialitiesServices />
-      <OurBranches />
+      {/* <OurBranches /> */}
+      <BranchCard />
     </div>
   )
 }

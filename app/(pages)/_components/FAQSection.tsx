@@ -1,42 +1,91 @@
 'use client';
+import Link from "next/link";
 
 import { useState } from "react";
 
 const faqs = [
   {
-    q: "What courses does Arise Medical Academy offer?",
-    a: "Arise Medical Academy offers comprehensive courses for FMGE preparation, including Regular Batches, Crash Courses, and specialised Achievers Batches for final year students.",
+    q: "What courses does Arise Medical Academy Jaipur offer?",
+    a: "Arise Medical Academy Jaipur offers Regular Offline Batches, Online Batches, Vacation Batches, Revision Programs, and Infinity Batches.",
   },
   {
     q: "How are the classes conducted?",
-    a: "We offer both online and offline classes to accommodate different learning preferences. Our classes are led by experienced faculty and include interactive sessions and regular tests.",
+    a: "Two modes we have to conduct our Classes i.e Offline & Online.",
   },
   {
     q: "How many branches does Arise have?",
-    a: "Arise has 5 branches in Hyderabad, Delhi, Jaipur, Chennai, and Taliparamba, Jaipur.",
+    a: "Arise has 5 branches in Jaipur, Delhi, Hyderabad, Kerala, and Chennai.",
   },
   {
-    q: "How can I communicate with the Arise team?",
-    a: "You can communicate with us through our social media channels or reach out directly at +91 76809 29292.",
+    q: "How can I communicate with the Arise Jaipur team?",
+    a: (
+      <>
+        You can communicate with us through our social media channels or reach
+        out directly at{" "}
+        <Link
+          href="tel:+919929113115"
+          className="text-blue-600 font-semibold hover:underline"
+        >
+          +91 9929113115
+        </Link>
+        {" "}or{" "}
+        <Link
+          href="https://wa.me/919929113115"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 font-semibold hover:underline"
+        >
+          WhatsApp
+        </Link>
+        .
+      </>
+    ),
   },
   {
-    q: "How can I enrol in a course?",
-    a: "You can enrol in a course by visiting our website and filling out the enrollment form, or by contacting us directly at 7680929292 for assistance.",
+    q: "How can I enroll in a course?",
+    a: (
+      <>
+        You can enroll by visiting our website and filling out the 
+        <a 
+          href="/register"
+          className="text-blue-600 font-semibold hover:underline"
+          > Enrollment form</a>, or contact us directly at{" "}
+        <a
+          href="tel:+919929113115"
+          className="text-blue-600 font-semibold hover:underline"
+        >
+          +91 9929113115
+        </a>
+        .
+        <br />
+        <Link
+          href="https://wa.me/919929113115"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 font-semibold hover:underline"
+        >
+          Enquire on WhatsApp.
+        </Link>
+      </>
+    ),
   },
   {
     q: "What is included in the study material?",
     a: "Our study material includes detailed workbooks, an extensive question bank, previous year questions, image-based learning resources, and up-to-date exam information.",
   },
   {
-    q: "What makes Arise Medical Academy different from other institutes?",
-    a: "Arise Medical Academy stands out due to our experienced faculty, comprehensive study material, extensive question bank, and the ability to start preparation early with our Achievers Batches. We also stay updated with the latest exam formats and patterns.",
+    q: "What makes Arise Medical Academy Jaipur different from other institutes?",
+    a: "Arise Jaipur is situated at a peaceful Placem & easy accommodation, easy  transportation, and budget-friendly living. That’s why it is suitable for All students from different states.",
   },
   {
     q: "Can I access the study material and classes online?",
     a: "Yes, our app provides access to all study materials, classes, and additional resources online, allowing you to study anytime, anywhere.",
   },
+  {
+    q:"Is a library facility available at the institute?",
+    a:"Yes, We have library available 24x7 in the campus provides.",
+  }
 ];
-
 
 export default function Faqs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -46,35 +95,31 @@ export default function Faqs() {
   };
 
   return (
-    <section className=" pb-10 mt-25 bg-white">
+    <section className="pb-10 mt-25 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-semibold text-blue-900 mb-8">
           FAQs
         </h2>
 
-        {/* Accordion */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className=" border border-gray-200 rounded-xl overflow-hidden"
+              className="border border-gray-200 rounded-xl overflow-hidden"
             >
-              {/* Question */}
               <button
                 onClick={() => toggle(index)}
-                className=" w-full flex justify-between items-center px-5 py-4 text-left font-medium text-gray-900 hover:bg-green-50 transition"
+                className="w-full flex justify-between items-center px-5 py-4 text-left font-medium text-gray-900 hover:bg-blue-60 transition"
               >
                 <span>
                   {index + 1}. {faq.q}
                 </span>
 
                 <span className="text-xl">
-                  {openIndex === index ? "x" : "+"}
+                  {openIndex === index ? "×" : "+"}
                 </span>
               </button>
 
-              {/* Answer */}
               {openIndex === index && (
                 <div className="px-5 pb-4 text-gray-700 text-sm leading-relaxed">
                   {faq.a}

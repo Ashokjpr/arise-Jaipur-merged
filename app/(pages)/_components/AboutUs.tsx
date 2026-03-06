@@ -18,24 +18,19 @@ function AboutUs() {
             className="text-sm md:text-lg text-gray-700 leading-relaxed"
             data-aos="zoom-in-up"
           >
-            Arise Medical Academy is established in the year 2010, with a vision of
-            providing innovative medical coaching with dedication in encouraging
-            learner-centered education. As the best FMGE coaching centre in Jaipur,
-            we ensure that every student achieves their career goals and develops
-            skills, compassion, and professionalism in the medical field. With an
-            aim to provide the best quality of education, we offer top support to
-            students and shape them into fine medical practitioners. Arise has
-            delivered excellent results over the years, making it one of the most
-            preferred coaching centres in Jaipur.
+            Arise Medical Academy was established in 2010 with a vision to provide innovative, learner-centered medical coaching. Known as one of the best FMGE coaching institutes, Arise  Jaipur is committed to helping students achieve their career goals with skill, compassion, and professionalism.
+            <br></br>
+            The Jaipur Centre, started in 2023, focuses on delivering top-quality FMGE coaching with expert faculty support and proven results. With a strong presence in Jaipur, Arise  Jaipur continues to shape future medical practitioners through dedicated guidance and academic excellence.
           </p>
 
           {/* Button */}
           <div className="mt-8 flex justify-center ">
             <Link
-              href="/register"
+              href="https://wa.me/919929113115"
+              target="_blank"
               className="text-white bg-green-500 px-8 py-3 rounded-lg text-lg font-medium hover:bg-green-900 transition duration-300"
             >
-              Apply Now
+              Contact Us
             </Link>
           </div>
 

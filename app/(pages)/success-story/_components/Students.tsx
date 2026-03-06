@@ -60,7 +60,7 @@ export default function Students() {
   return (
     <>
       {/* ================= GRID SECTION ================= */}
-      <section className="w-full bg-gradient-to-b from-gray-50 to-white md:py-16 px-4 sm:px-8 lg:px-16">
+      <section className="w-full bg-linear-to-b from-gray-50 to-white md:py-16 px-4 sm:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-16">

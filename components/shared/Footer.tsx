@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import AriseLogo from "./AriseLogo";
 
 function Footer() {
   const headerData = [
@@ -39,7 +40,9 @@ function Footer() {
 
           {/* Logo + Social */}
           <div className="basis-full lg:basis-[15%] flex flex-col items-center lg:items-start">
-            <Image src="/arise-logo.png" alt="Logo" width={150} height={150} />
+           <AriseLogo/>
+           
+            {/* <Image src="/arise-logo7.png" alt="Logo" width={150} height={150} /> */}
 
             <div className="flex gap-4 mt-4">
               <Link href="https://www.facebook.com/AriseMedAcademy" className="text-2xl md:text-3xl text-white rounded-md bg-[#2540ae]">
@@ -48,7 +51,7 @@ function Footer() {
               <Link href="https://x.com/arisemedical1" className="text-2xl md:text-3xl text-white rounded-md bg-black">
                 <Icon icon="tabler:brand-x" />
               </Link>
-              <Link href="https://www.instagram.com/arisejaipur/" className="text-white rounded-md text-2xl md:text-3xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+              <Link href="https://www.instagram.com/arisejaipur/" className="text-white rounded-md text-2xl md:text-3xl bg-linear-to-tr from-yellow-400 via-pink-500 to-purple-600">
                 <Icon icon="tabler:brand-instagram" />
               </Link>
             </div>
@@ -112,21 +115,47 @@ function Footer() {
 
             <Link
               href="tel:+919929113115"
+              target="_blank"
               className="flex items-center gap-2 hover:text-green-700 transition"
             >
               <Icon icon="tabler:phone" className="text-xl md:text-2xl" />
               <span className="text-black/80 text-sm md:text-base">
-                +91 99291 13115
+                <Link
+                        href="tel:+91 9929113115"
+                        target="_blank"
+                      >
+                        +91 9929113115
+                      </Link>
+                      /
+                      <Link
+                        href="tel:+91 9929113116"
+                      >
+                        116
+                      </Link>
+              </span>
+              <span className="text-black/80 text-sm md:text-base">
+                <Link
+                        href="tel:+91 9799902054"
+                        target="_blank"
+                      >
+                        +91 9799902054
+                      </Link>
+                      /
+                      <Link
+                        href="tel:+91 9799902064"
+                      >
+                        64
+                      </Link>
               </span>
             </Link>
 
             <Link
-              href="mailto:info@arisemedicalacademy.com"
+              href="mailto:arisemedicalacademyrajasthan@gmail.com"
               className="flex items-center gap-2 mt-3 hover:text-green-700 transition"
             >
               <Icon icon="tabler:mail" className="text-xl md:text-2xl" />
               <span className="text-black/80 text-sm md:text-base">
-                info@arisemedicalacademy.com
+                arisemedicalacademyrajasthan@gmail.com
               </span>
             </Link>
 

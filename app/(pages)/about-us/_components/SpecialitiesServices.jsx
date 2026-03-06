@@ -21,26 +21,30 @@ export default function SpecialitiesServices() {
 
   return (
     <section className="w-full bg-white py-16 px-4 sm:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto ">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* ================= LEFT SIDE ================= */}
           {/* OUR SPECIALITIES */}
           <div>
-            <h2 className="text-4xl font-serif font-semibold text-center lg:text-left mb-10"
-             data-aos="fade-up"
+            <h2 className="text-2xl md:text-4xl font-serif font-semibold text-center lg:text-left mb-10"
+              data-aos="fade-up"
             >
               OUR SPECIALITIES
             </h2>
 
-            <div className="relative w-full h-80 sm:h-96 lg:h-[500px]  overflow-hidden"
-             data-aos="fade-right">
+            <div
+              className="relative w-full overflow-hidden"
+              data-aos="fade-right"
+            >
               <Image
-                src="/images/special-main.jpg" // put your single image here
+                src="/images/special-main.jpg"
                 alt="Our Specialities"
-                fill
-                className="object-cover"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-cover"
+                priority
               />
             </div>
           </div>
@@ -50,8 +54,8 @@ export default function SpecialitiesServices() {
           {/* OUR SERVICES */}
           <div>
             <h2 className="text-4xl font-serif font-semibold text-center lg:text-left mb-10"
-             data-aos="fade-up"
-             >
+              data-aos="fade-up"
+            >
               OUR SERVICES
             </h2>
 
@@ -63,7 +67,7 @@ export default function SpecialitiesServices() {
                   data-aos="fade-left"
                   data-aos-delay={index * 100}
                 >
-                  <FaCheckCircle className="text-blue-900 mt-1 flex-shrink-0" />
+                  <FaCheckCircle className="text-blue-900 mt-1 shrink-0" />
                   <p className="text-gray-700 text-sm sm:text-base font-medium">
                     {service}
                   </p>

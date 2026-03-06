@@ -15,7 +15,7 @@ export default function AboutSection() {
             >
             <Image
               src="/images/building.webp" 
-              alt="Arise Building"
+              alt="Arise  Jaipur Building"
               fill
               className="object-cover"
             />
@@ -33,33 +33,34 @@ export default function AboutSection() {
             data-aos="fade-left"
             data-aos-delay="100"
            >
-              Arise is giving quality medical education and have many success stories from last 10 Years.
+              Arise  Jaipur is giving quality medical education and have many success stories from last 4 Years.
             </p>
 
             <p className="text-gray-700 text-sm sm:text-base "
             data-aos="fade-left"
             data-aos-delay="150"
            >
-              Arise started in 2014 for FMGE aspirants with a vision to fulfil the career goals which has to be attained by all Abroad MBBS Students.
+              Arise Jaipur started in 2023 for FMGE aspirants with a vision to fulfil the career goals which has to be attained by all Abroad MBBS Students.
             </p>
             <p className="text-gray-700 text-sm sm:text-base "
             data-aos="fade-left"
             data-aos-delay="200"
            >
-              In last 10 years Arise has earned a good reputation and has proved itself the best FMGE Coaching Institute in INDIA through our honesty, dedication and efforts like our saying “BUILDING BETTER DOCTORS”.
+              In last 4 years Arise  Jaipur has earned a good reputation and has proved itself the best FMGE Coaching Institute in INDIA through our honesty, dedication and efforts like our saying “BUILDING BETTER DOCTORS”.
              </p>
             <p className="text-gray-700 text-sm sm:text-base "
             data-aos="fade-left"
             data-aos-delay="250"
            >
-              Arise Medical Academy Jaipur has started in JUNE 2023 and has given the best efforts to made it to more than 67% in the very first Batch. 
+              Arise Medical Academy Jaipur has started in JUNE 2023 and has given the best efforts to made it to more than 75% in the very first Batch. 
              </p>
-            <button className="mt-4 bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+
+            {/* <button className="mt-4 bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
             data-aos="fade-left"
             data-aos-delay="300"
            >
               Read More
-            </button>
+            </button> */}
           </div>
 
         </div>

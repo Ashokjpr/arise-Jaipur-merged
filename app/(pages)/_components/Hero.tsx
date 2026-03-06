@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Link from "next/link";
 
 import HomeSlider from "./HomeSlider"
 
@@ -15,17 +16,27 @@ export default function Hero() {
       {/* Content */}
       <div className="relative max-w-4xl mx-auto px-6 text-center text-white">
         <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6" data-aos="fade-left">Arise Medical Academy Jaipur</h2>
+        <p className="text-sm md:text-xl"data-aos="fade-right">
+          India's best FMGE/NEXT academy for all the abroad medical aspirants.
+        </p>
+
+        <p className="text-sm md:text-xl"data-aos="fade-right">
+          We provide FMGE/NEXT exam Coaching.
+        </p>
+
         <p className="text-sm md:text-xl mb-8"data-aos="fade-right">
-          A coaching and training institute focused on medical exam preparation, especially for FMGE/MCI Screening Examination and related exams.
+          A Coaching and training institute focused on medical exam preparation, especially for FMGE/NEXT Screening Examination.
         </p>
 
         <div className="flex justify-center gap-6">
           <button className="bg-blue-600  px-3 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-700 transition"data-aos="fade-left">
             View Courses
           </button>
-          <button className="bg-white text-blue-600  px-3 py-2 md:px-6 md:py-3 rounded-lg hover:bg-gray-200 transition" data-aos="fade-right">
-            Contact Us
+          <Link href="/register">
+            <button className="bg-white text-blue-600  px-3 py-2 md:px-6 md:py-3 rounded-lg hover:bg-gray-200 transition" data-aos="fade-right">
+            Register Now
           </button>
+          </Link>
         </div>
        
       </div>

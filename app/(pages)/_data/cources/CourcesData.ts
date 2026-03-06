@@ -16,15 +16,15 @@ export const fmgeRegularCourse = {
 
   highlights: [
     "All 19 Subjects Covered",
-    "Subject Wise Test & 3 Grand Test",
+    "Subject Wise Test & Monthly Grand Test",
     "National Level Faculties",
-    "Test and Discussion Session",
+    "T&D rapid rev., QRP & Grand Test",
     "Printed Materials",
     "Based on the New Clinical Pattern",
-    "A/C Classrooms with Free WIFI",
+    "A/C Classrooms",
     "24X7 Reading Room with Free WIFI",
-    "Hostels with Free WIFI",
-    "Homely Meals (Veg & Non-Veg)"
+    "Hostels",
+    "Homely Meals"
   ]
 };
 
@@ -46,15 +46,13 @@ export const fmgeRegularOnlineCourse = {
 
   highlights: [
     "All 19 Subjects Covered",
-    "Subject Wise Test & 3 Grand Test",
+    "Subject Wise Test & Monthly Grand Test",
     "National Level Faculties",
-    "Test and Discussion Session",
-    "Soft Copy Pdf Materials",
+    "T&D rapid rev. QRP & Grand Test",
+    "Soft Copy Pdf Materials / Printed material",
     "Based on the New Clinical Pattern",
-    "A/C Classrooms with Free WIFI",
-    "24X7 Reading Room with Free WIFI",
-    "Hostels with Free WIFI",
-    "Homely Meals (Veg & Non-Veg)"
+    "PYQ's , Customised test",
+    "Q Bank with 18000+ Questions",
   ]
 };
 
@@ -132,14 +130,14 @@ export const fmgeTestDiscussionCourse = {
   courseDetails: {
     heading: "Course Details",
     description:
-      "Specially designed course for FMGE aspirants who want to prepare from home.The course has been designed in such a manner that it will give students an advantage in analysing their skills, knowledge and understanding level.This course is mainly for students who prefer to polish their skills and have already done lots of self-study."
+      "Specially designed for FMGE aspirants who wish to prepare from home, this course is carefully structured to help students effectively analyze their skills, knowledge, and level of understanding. It is ideal for students who have already completed extensive self-study and want to further polish and strengthen their concepts with a strategic approach."
   },
 
   highlights: [
     "Subject-wise Test and Discussion",
     "Live Discussion with Faculty",
     "Fast Track Revision",
-    "Revision of high yield 12 subjects"
+    "Revision of high yield 19 subjects"
   ]
 };
 
@@ -161,7 +159,7 @@ export const fmgeRapidRevisionCourse = {
 
   highlights: [
     "Better choice for final revision",
-    "12 high yield subjects covered",
+    "19 high yield subjects covered",
     "Live discussion with faculties",
     "Based on the New Clinical Pattern"
   ]
@@ -190,5 +188,32 @@ export const fmgeVacationalCourse = {
     "Mock Test",
     "Printed Materials",
     "Based on the New Clinical Pattern"
+  ]
+};
+
+
+export const qrfFmgeCourse = {
+  slug: "qrf-fmge-course",
+  hero: {
+    title: "QRF FMGE Course",
+    cta: {
+      label: "Register Now",
+      link: "/register"
+    }
+  },
+
+  courseDetails: {
+    heading: "Course Details",
+    description:
+      "QRF FMGE Course is a focused rapid revision program designed to help FMGE aspirants strengthen key concepts and boost their final exam performance. It covers high-yield topics, important questions, and exam-oriented strategies to improve accuracy, confidence, and time management before the exam."  },
+
+  highlights: [
+  "Rapid revision of all 19 FMGE subjects",
+  "High-yield notes & important concepts",
+  "Previous year & memory-based question discussion",
+  "Integrated clinical approach",
+  "Doubt-solving sessions",
+  "Mock tests with detailed explanation",
+  "Exam strategy & time management guidance",
   ]
 };

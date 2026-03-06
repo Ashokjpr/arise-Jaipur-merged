@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
+import AriseLogo from "./AriseLogo";
+
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
@@ -11,13 +14,15 @@ export default function Navbar() {
   const pathname = usePathname();
   const navItems = ["Home", "About Us", "Courses", "Contact Us", "Faculty", "Success Story", "Blog", "Gallery",];
   const courseItems = [
-    { label: "FMGE Rapid Revision", href: "/fmge-rapid-revision" },
-    { label: "FMGE Regular Course", href: "/fmge-regular-course" },
+    { label: "FMGE Regular Offline Course ", href: "/fmge-regular-offline-course" },
     { label: "FMGE Regular Online Course", href: "/fmge-regular-online-course" },
-    { label: "FMGE Semi Regular Course", href: "/fmge-semi-regular-course" },
-    { label: "FMGE Semi Regular Online Course", href: "/fmge-semi-regular-online-course" },
-    { label: "FMGE Test Discussion Course", href: "/fmge-test-discussion-course" },
     { label: "FMGE Vacational Course", href: "/fmge-vacational-course" },
+    { label: "FMGE Rapid Revision", href: "/fmge-rapid-revision" },    
+    { label: "FMGE Test Discussion Course", href: "/fmge-test-discussion-course" },
+    { label: "FMGE Semi Regular Online Course", href: "/fmge-semi-regular-online-course" },
+    { label: "QRF FMGE Course", href: "/qrf-fmge-course" },
+    
+    // { label: "FMGE Semi Regular Course", href: "/fmge-semi-regular-course" },
   ];
 
   const getHref = (item: string) => item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`;
@@ -28,24 +33,26 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 shadow-sm bg-white/90 backdrop-blur relative ">
+    <header className="sticky top-0 z-50 shadow-sm bg-white/90 backdrop-blur  ">
       {/* Jaipur Skyline Background */}
       <div className="absolute inset-0 bg-repeat-x bg-bottom opacity-40 pointer-events-none" style={{ backgroundImage: "url('/images/rajesthan-bg2.png')", backgroundSize: "auto 60px", }} />
-      <nav className="relative bg-white/20 max-w-7xl mx-auto px-4">
+      <nav className="relative bg-white/20 max-w-7xl mx-auto px-4 sm:px-0 lg:px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <AriseLogo/>
+          {/* <div className="flex items-center gap-2">
             {!logoError ? (
-              <Image src="/arise-logo.png"
+              <Image src="/arise-logo7.png"
                 alt="Arise Medical Academy Logo"
                 width={150}
                 height={50}
                 priority
                 onError={() => setLogoError(true)} />) : (<span className="text-xl font-bold text-blue-700">ARISE</span>)}
-          </div>
+          </div> */}
+
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8 font-medium text-black">
+          <div className="hidden md:flex items-center sm:gap-2 lg:gap-6 px-1 font-medium text-black">
             {navItems.map((item) => {
               if (item === "Courses") {
                 return (<div key={item} className="relative group">
@@ -97,7 +104,9 @@ export default function Navbar() {
       <aside className={`fixed top-0 right-0 z-50 h-full w-72 bg-white text-gray-600 shadow-xl transform transition-transform duration-300 md:hidden ${open ? "translate-x-0" : "translate-x-full hidden"}`}
       >
         <div className="flex items-center justify-between px-4 h-16 border-b">
-          {!logoError ? (<Image src="/arise-logo.png" alt="Arise Medical Academy Logo" width={120} height={40} onError={() => setLogoError(true)} />) : (<span className="text-lg font-bold text-blue-700">ARISE</span>)}
+            <AriseLogo/>
+          {/* {!logoError ? (<Image src="/arise-logo7.png" alt="Arise Medical Academy Logo" width={120} height={40} onError={() => setLogoError(true)} />) : (<span className="text-lg font-bold text-blue-700">ARISE</span>)} */}
+         
           <button aria-label="Close menu" onClick={() => { setOpen(false); setMobileCoursesOpen(false); }} className="p-2 rounded-lg hover:bg-gray-100"
           >
             <X />

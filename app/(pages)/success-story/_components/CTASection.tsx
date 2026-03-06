@@ -1,8 +1,9 @@
 "use client";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-center text-white px-6">
+    <section className="py-10 bg-linear-to-r from-blue-900 to-blue-700 text-center text-white px-6">
 
       <h2 className="text-3xl md:text-4xl font-bold">
         Be Our Next Success Story!
@@ -12,9 +13,11 @@ export default function CTASection() {
       <p className="mb-8 text-lg opacity-90 max-w-2xl mx-auto">
         Join Arise Medical Academy Jaipur and start your journey toward FMGE.
       </p>
+      <Link href="/register">
       <button className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition duration-300">
         Register Now
       </button>
+      </Link>
 
     </section>
   );

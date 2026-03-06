@@ -46,7 +46,7 @@ export default function MissionVision() {
               <li>Our mission is to be recognized as the best FMGE Institute around the globe.</li>
               <li>To Provide high quality medical education.</li>
               <li>To provide 0 to 100% facilities under a roof for better support to students.</li>
-              <li>Arise have An Eco-System which is beneficial for students and peaceful environment.</li>
+              <li>Arise  Jaipur have An Eco-System which is beneficial for students and peaceful environment.</li>
             </ul>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function MissionVision() {
 
             <ul className="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
               <li>
-                We envision Arise Medical Academy as a center of academic excellence imparting students with profound theoretical knowledge along with clinical expertise.
+                We envision Arise Medical Academy jaipur as a center of academic excellence imparting students with profound theoretical knowledge along with clinical expertise.
               </li>
               <li>
                 The holistic approach not just to create doctors but to create best and better doctors with good medical ethics and also better human beings who have compassion, empathy and sympathy.

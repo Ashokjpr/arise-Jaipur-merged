@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -37,7 +38,7 @@ function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
-
+        // console.log(values)
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Something went wrong");
 
@@ -48,14 +49,21 @@ function ContactForm() {
     }
   };
 
+  const whyChoose = [
+  "Better study environment",
+  "Pollution-free area",
+  "Easy transportation",
+  "Budget-friendly living",
+  "Supportive team and management"
+];
   return (
-    <section className="bg-green-50 py-2">
+    <section className="bg-gradient-to-b from-green-50  to-white py-2">
       <div className="max-w-7xl mx-auto px-4 mt-10 mb-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* LEFT */}
           <div>
-            <div className="relative mb-8 h-80">
+            <div className="relative mb-8 h-80 ">
               <Image
                 src="/assets/collage-img/img-1.webp"
                 alt="Classroom"
@@ -83,13 +91,7 @@ function ContactForm() {
             </h3>
 
             <ul className="space-y-1">
-              {[
-                "20,000+ successful students | 74% FMGE success rate",
-                "Updated, exam-focused study material",
-                "Experienced & dedicated faculty",
-                "Modern campus with hostel & reading room",
-                "Supportive learning environment",
-              ].map((text, i) => (
+              {whyChoose.map((text, i) => (
                 <li key={i} className="flex gap-3 text-gray-700">
                   <span className="text-green-600 mt-1">✔</span>
                   <span>{text}</span>
@@ -106,7 +108,7 @@ function ContactForm() {
             </h2>
 
             <p className="text-gray-600 text-sm my-5">
-              "Join ARISE Medical Academy and prepare confidently for FMGE."
+              "Join ARISE Medical Academy Jaipur and prepare confidently for FMGE."
             </p>
 
             <form
@@ -182,11 +184,9 @@ function ContactForm() {
               </button>
 
               {/* WhatsApp */}
-              <button
-                type="button"
-                onClick={() =>
-                  window.open("https://wa.me/918136932666", "_blank")
-                }
+              <Link 
+                    href="https://wa.me/919929113115"
+                    target="_blank"
                 className="bg-blue-800 text-white py-3 rounded-lg hover:bg-blue-900 transition font-semibold flex items-center justify-center gap-2 group"
               >
                 <Icon
@@ -196,7 +196,7 @@ function ContactForm() {
                 <span className="group-hover:scale-105 transition">
                   Chat Now
                 </span>
-              </button>
+              </Link>
             </form>
           </div>
 

@@ -32,7 +32,7 @@ export default function RegisterPage() {
       
       </div> */}
 
-      <div className="relative w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <div className="relative w-full max-w-6xl bg-white  rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
 
         {/* LEFT SIDE */}
         <div className="hidden md:flex flex-col justify-between p-12 bg-gradient-to-b from-sky-100 to-blue-200">
@@ -46,7 +46,7 @@ export default function RegisterPage() {
 
 
             <p className="text-blue-800 text-sm leading-relaxed max-w-md">
-              Join Arise Medical Academy and begin your journey towards excellence
+              Join Arise Medical Academy Jaipur and begin your journey towards excellence
               in medical education with expert faculty and proven results.
             </p>
 

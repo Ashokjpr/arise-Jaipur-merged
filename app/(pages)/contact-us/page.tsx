@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactForm from "./_components/contact-form";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
@@ -56,8 +57,8 @@ export const metadata: Metadata = {
 
 function ContactUs() {
   return (
-    <>
-      <div className="relative bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff]">
+    <> 
+      <div className="relative bg-linear-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff]">
         <div className="relative flex  items-start justify-center contact-banner">
           <Image
             className="w-full "
@@ -67,7 +68,7 @@ function ContactUs() {
             height={300}
           />
           <div className="overlay container">
-            <h1 className="fs-3">Contact Us</h1>
+            <h2 className="text-white mx-auto md:ms-25 text-xl md:text-6xl ">Contact Us</h2>
           </div>
         </div>
       </div>
@@ -87,7 +88,7 @@ function ContactUs() {
 
         {/* CARD */}
         <div className="max-w-6xl mx-auto px-4">
-          <div className="rounded-[40px] overflow-hidden bg-gradient-to-r from-[#02024d] to-[#000033] text-white shadow-xl">
+          <div className="rounded-[40px] overflow-hidden bg-linear-to-r from-[#02024d] to-[#000033] text-white shadow-xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
               {/* LEFT CONTENT */}
               <div>
@@ -111,7 +112,11 @@ function ContactUs() {
                     <div>
                       <h4 className="font-semibold">Our Address:</h4>
                       <p className="text-white/80">
-                        plot no -26, Tonk Rd, near Pushp Enclave, Krishna Vihar, Sector 5, Pratap Nagar, Jaipur, Rajasthan 302033
+                      <Link
+                        href="https://maps.app.goo.gl/L8STX88Bf25zAabX6"
+                        target="_blank">
+                       plot no -26, Tonk Rd, near Pushp Enclave, Krishna Vihar, Sector 5, Pratap Nagar, Jaipur, Rajasthan 302033
+                        </Link>
                       </p>
                     </div>
                   </li>
@@ -124,7 +129,13 @@ function ContactUs() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Our Email:</h4>
-                      <p className="text-white/80">arisemedicalacademyrajasthan@gmail.com</p>
+                      <p className="text-white/80">
+                        <Link
+                           href="mailto:arisemedicalacademyrajasthan@gmail.com"
+                           >
+                             arisemedicalacademyrajasthan@gmail.com
+                        </Link>
+                        </p>
                     </div>
                   </li>
 
@@ -136,14 +147,41 @@ function ContactUs() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Our Phone:</h4>
-                      <p className="text-white/80">+91 9929113115</p>
+                      <p className="text-white/80">
+                      <Link
+                        href="tel:+91 9929113115"
+                      >
+                        +91 9929113115
+                      </Link>
+                      /
+                      <Link
+                        href="tel:+91 9929113116"
+                      >
+                        116
+                      </Link>
+                      </p>
+
+                       <p className="text-white/80">
+                      <Link
+                        href="tel:+91 9799902054"
+                      >
+                        +91 9799902054
+                      </Link>
+                      /
+                      <Link
+                        href="tel:+91 9799902064"
+                      >
+                        64
+                      </Link>
+                      </p>
+
                     </div>
                   </li>
                 </ul>
               </div>
 
               {/* RIGHT MAP */}
-              <div className="w-full h-[350px] md:h-full rounded-3xl overflow-hidden bg-white" data-aos="fade-left"
+              <div className="w-full h-87.5 md:h-full rounded-3xl overflow-hidden bg-white" data-aos="fade-left"
                 data-aos-delay={300}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4419.178352999524!2d75.80940947611911!3d26.79823796499951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9689e3c5fdb%3A0xc7addeea9bef570f!2sArise%20Medical%20Academy%20Jaipur%20-%20FMGE%2F%20NEXT%20Coaching%20%7C%20MCI%20Training%20Institute!5e1!3m2!1sen!2sin!4v1770210025103!5m2!1sen!2sin"
