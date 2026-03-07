@@ -26,15 +26,15 @@ export default function FacultyCard({ name, subject, image }) {
             // src="/images/DrKhaleel2.png"
             alt={name}
             fill
-            className="object-cover h-40 w-25"
+            className="object-cover h-25 w-25"
           />
         </div>
 
         <div className="mt-1">
           {/* Name */}
-          <span className="text-lg  font-bold text-gray-800 bg-blue-300  shadow-2xl px-3 mx-5">
+          <div className="text-lg  font-bold text-gray-800 bg-blue-300  shadow-2xl px-3 mx-5">
             {name}
-          </span>
+          </div>
 
           {/* Subject Badge */}
           <span className=" inline-block bg-teal-500 text-white text-xs font-semibold px-4 py-1 -mt-2">
