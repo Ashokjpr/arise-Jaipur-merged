@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 
-export default function JotformWidget() {
+export default function GoogleReview() {
   return (
     <div className="w-full flex justify-center items-center bg-gradient-to-b from-white to-gray-100">
       <div className="w-full max-w-7xl">
