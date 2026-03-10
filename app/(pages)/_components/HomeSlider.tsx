@@ -16,6 +16,14 @@ const slides = [
 
 export default function WebsiteSlider() {
   const [active, setActive] = useState(3);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const nextSlide = () => {
     setActive((prev) => (prev + 1) % slides.length);
@@ -32,6 +40,11 @@ export default function WebsiteSlider() {
     if (diff > total / 2) diff -= total;
     if (diff < -total / 2) diff += total;
 
+    const offset1 = isMobile ? 120 : 260;
+    const offset2 = isMobile ? 220 : 450;
+    const scale1 = isMobile ? 0.85 : 0.9;
+    const scale2 = isMobile ? 0.65 : 0.75;
+
     // CENTER
     if (diff === 0)
       return {
@@ -46,43 +59,43 @@ export default function WebsiteSlider() {
     // LEFT SIDE
     if (diff === -1)
       return {
-        x: -260,
-        scale: 0.9,
+        x: -offset1,
+        scale: scale1,
         rotateY: 23,
         z: -100,
         zIndex: 4,
-        opacity: 0.9,
+        opacity: isMobile ? 0.4 : 0.9,
       };
 
     if (diff === -2)
       return {
-        x: -450,
-        scale: 0.75,
+        x: -offset2,
+        scale: scale2,
         rotateY: 40,
         z: -150,
         zIndex: 3,
-        opacity: 0.6,
+        opacity: isMobile ? 0 : 0.6,
       };
 
     // RIGHT SIDE
     if (diff === 1)
       return {
-        x: 260,
-        scale: 0.9,
+        x: offset1,
+        scale: scale1,
         rotateY: -23,
         z: -100,
         zIndex: 4,
-        opacity: 0.9,
+        opacity: isMobile ? 0.4 : 0.9,
       };
 
     if (diff === 2)
       return {
-        x: 450,
-        scale: 0.75,
+        x: offset2,
+        scale: scale2,
         rotateY: -40,
         z: -150,
         zIndex: 3,
-        opacity: 0.6,
+        opacity: isMobile ? 0 : 0.6,
       };
 
     return {
@@ -105,8 +118,8 @@ export default function WebsiteSlider() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto h-[420px] flex items-end justify-center overflow-hidden">
-      
+    <div className="relative w-full max-w-7xl mx-auto h-[320px] md:h-[420px] flex items-end justify-center overflow-hidden">
+
       {/* Perspective Wrapper */}
       <div className="relative w-full perspective-[2000px]">
         {slides.map((slide, index) => {
@@ -115,7 +128,8 @@ export default function WebsiteSlider() {
           return (
             <motion.div
               key={index}
-              className="absolute w-[270px] h-[400px] left-1/2 bottom-0 -translate-x-1/2"
+              className={`absolute left-1/2 bottom-0 -translate-x-1/2 ${isMobile ? "w-[200px] h-[300px]" : "w-[270px] h-[400px]"
+                }`}
               style={{
                 zIndex: position.zIndex,
                 transformStyle: "preserve-3d",
@@ -151,14 +165,14 @@ export default function WebsiteSlider() {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-5 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-12 h-12 rounded-full shadow-xl flex items-center justify-center text-xl"
+        className="absolute left-2 md:left-5 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-8 h-8 md:w-12 md:h-12 rounded-full shadow-xl flex items-center justify-center text-sm md:text-xl z-20"
       >
         ◀
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-5 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-12 h-12 rounded-full shadow-xl flex items-center justify-center text-xl"
+        className="absolute right-2 md:right-5 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-8 h-8 md:w-12 md:h-12 rounded-full shadow-xl flex items-center justify-center text-sm md:text-xl z-20"
       >
         ▶
       </button>

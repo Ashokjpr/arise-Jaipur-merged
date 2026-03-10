@@ -38,7 +38,7 @@ export default function MedicalSuccessStatus() {
           {/* ================= LEFT SIDE ================= */}
         <div>
           <h1 className="text-4xl text-blue-800 mx-auto text-center">Event Highlights</h1>
-           <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-3"></div>
+           <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-7 md:mb-3"></div>
           <div className="relative">
          
                    {/* Vertical Line (Desktop Only) */}

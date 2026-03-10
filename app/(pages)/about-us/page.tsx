@@ -9,7 +9,7 @@ import BranchCard from "./_components/BranchCard"
 
 function page() {
   return (
-    <div>
+    <div  className="w-full max-w-7xl mx-auto overflow-hidden">
       <Hero />
       <AboutSection />
       <AimObjective />

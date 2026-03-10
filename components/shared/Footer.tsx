@@ -113,9 +113,7 @@ function Footer() {
           <div>
             <h3 className="mb-4 text-xl md:text-2xl font-medium">Get In Touch</h3>
 
-            <Link
-              href="tel:+919929113115"
-              target="_blank"
+            <div
               className="flex items-center gap-2 hover:text-green-700 transition"
             >
               <Icon icon="tabler:phone" className="text-xl md:text-2xl" />
@@ -147,7 +145,7 @@ function Footer() {
                         64
                       </Link>
               </span>
-            </Link>
+            </div>
 
             <Link
               href="mailto:arisemedicalacademyrajasthan@gmail.com"

@@ -73,10 +73,10 @@ function ContactUs() {
         </div>
       </div>
 
-      <section className="py-16 bg-white">
+      <section className="py-2 md:py-16 bg-white">
         {/* HEADING */}
-        <div className="text-center max-w-3xl mx-auto mb-12 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3" data-aos="fade-left"
+        <div className="text-center max-w-3xl mx-auto md:mb-12 px-4">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3" data-aos="fade-left"
                 data-aos-delay={150}>
             Want to Contact Us ?
           </h2>
@@ -87,9 +87,9 @@ function ContactUs() {
         </div>
 
         {/* CARD */}
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-2 md:px-4">
           <div className="rounded-[40px] overflow-hidden bg-linear-to-r from-[#02024d] to-[#000033] text-white shadow-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-4 md:p-12">
               {/* LEFT CONTENT */}
               <div>
                 <h3 className="text-3xl font-semibold mb-4" data-aos="fade-left"

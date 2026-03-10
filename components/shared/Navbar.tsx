@@ -17,11 +17,11 @@ export default function Navbar() {
     { label: "FMGE Regular Offline Course ", href: "/fmge-regular-offline-course" },
     { label: "FMGE Regular Online Course", href: "/fmge-regular-online-course" },
     { label: "FMGE Vacational Course", href: "/fmge-vacational-course" },
-    { label: "FMGE Rapid Revision", href: "/fmge-rapid-revision" },    
+    { label: "FMGE Rapid Revision", href: "/fmge-rapid-revision" },
     { label: "FMGE Test Discussion Course", href: "/fmge-test-discussion-course" },
     { label: "FMGE Semi Regular Online Course", href: "/fmge-semi-regular-online-course" },
     { label: "QRF FMGE Course", href: "/qrf-fmge-course" },
-    
+
     // { label: "FMGE Semi Regular Course", href: "/fmge-semi-regular-course" },
   ];
 
@@ -33,13 +33,14 @@ export default function Navbar() {
   }, [open]);
 
   return (
+    <>
     <header className="sticky top-0 z-50 shadow-sm bg-white/90 backdrop-blur  ">
       {/* Jaipur Skyline Background */}
       <div className="absolute inset-0 bg-repeat-x bg-bottom opacity-40 pointer-events-none" style={{ backgroundImage: "url('/images/rajesthan-bg2.png')", backgroundSize: "auto 60px", }} />
       <nav className="relative bg-white/20 max-w-7xl mx-auto px-4 sm:px-0 lg:px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <AriseLogo/>
+          <AriseLogo />
           {/* <div className="flex items-center gap-2">
             {!logoError ? (
               <Image src="/arise-logo7.png"
@@ -101,12 +102,14 @@ export default function Navbar() {
       {/* Mobile Overlay */}
       <div className={`fixed inset-0 z-40 bg-black/40 transition-opacity md:hidden ${open ? "opacity-100 visible" : "opacity-0 invisible"}`} onClick={() => { setOpen(false); setMobileCoursesOpen(false); }} />
       {/* Mobile Slide Menu */}
-      <aside className={`fixed top-0 right-0 z-50 h-full w-72 bg-white text-gray-600 shadow-xl transform transition-transform duration-300 md:hidden ${open ? "translate-x-0" : "translate-x-full hidden"}`}
+     
+    </header>
+     <aside className={`fixed top-0 right-0 z-50 h-full w-72 bg-white text-gray-600 shadow-xl transform transition-transform duration-300 md:hidden border-l border-gray-200 ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex items-center justify-between px-4 h-16 border-b">
-            <AriseLogo/>
+          <AriseLogo />
           {/* {!logoError ? (<Image src="/arise-logo7.png" alt="Arise Medical Academy Logo" width={120} height={40} onError={() => setLogoError(true)} />) : (<span className="text-lg font-bold text-blue-700">ARISE</span>)} */}
-         
+
           <button aria-label="Close menu" onClick={() => { setOpen(false); setMobileCoursesOpen(false); }} className="p-2 rounded-lg hover:bg-gray-100"
           >
             <X />
@@ -116,9 +119,9 @@ export default function Navbar() {
           {navItems.map((item) => {
             if (item === "Courses") {
               return (<div key={item} className="space-y-1">
-                <button onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)} className={`w-full ${mobileCoursesOpen? "bg-blue-50 font-semibold" :""} text-gray-600 flex items-center justify-between px-3 py-2 hover:bg-blue-50 rounded-lg transition`}
+                <button onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)} className={`w-full ${mobileCoursesOpen ? "bg-blue-50 font-semibold" : ""} text-gray-600 flex items-center justify-between px-3 py-2 hover:bg-blue-50 rounded-lg transition`}
                 >
-                 Courses
+                  Courses
                   <ChevronDown size={14} className={`transition-transform duration-200 ${mobileCoursesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {mobileCoursesOpen && (<div className="ml-4 space-y-1">
@@ -139,7 +142,8 @@ export default function Navbar() {
             Register
           </Link>
         </div>
-      </aside>
-    </header>);
+      </aside> 
+    </> 
+  );
 
 }

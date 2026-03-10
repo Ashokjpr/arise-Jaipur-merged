@@ -10,7 +10,7 @@ export default function MissionVision() {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900"
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-blue-900"
            data-aos="fade-up"
            >
             OUR MISSION & VISION

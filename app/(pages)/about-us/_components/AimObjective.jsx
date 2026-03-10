@@ -9,11 +9,11 @@ export default function AimObjective() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-blue-50 to-white py-16 px-4 sm:px-8 lg:px-16">
+    <section className="w-full bg-gradient-to-b from-blue-50 to-white py-6 md:py-16 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 "
+        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-blue-900 "
             data-aos="fade-up"
            >
           OUR AIM AND OBJECTIVE
@@ -22,7 +22,7 @@ export default function AimObjective() {
         <div className="w-24 h-1 bg-red-600 mx-auto mb-12 rounded-full"></div>
 
         {/* Objectives Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
           {objectives.map((item, index) => (
             <div
               key={index}
