@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="py-10 bg-linear-to-r from-blue-900 to-blue-700 text-center text-white px-6">
+    <section className="py-10 bg-linear-to-r from-blue-900 to-blue-700 text-center text-white px-6" data-aos="fade-up" data-aos-delay="100">
 
       <h2 className="text-3xl md:text-4xl font-bold">
         Be Our Next Success Story!

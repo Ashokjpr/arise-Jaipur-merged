@@ -57,7 +57,7 @@ function ContactForm() {
   "Supportive team and management"
 ];
   return (
-    <section className="bg-gradient-to-b from-green-50  to-white py-2">
+    <section className="bg-gradient-to-b from-green-50  to-white py-2 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mt-10 mb-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 

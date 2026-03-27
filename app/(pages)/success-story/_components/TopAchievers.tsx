@@ -67,10 +67,10 @@ function TopAchievers() {
     
         
         <div>
-      <section id="fmge2026"><Top10Slider students={topStudent2026} title="Top 10 FMGE Achievers 2026" /></section>
-      <section id="fmge2025"><Top10Slider students={topStudent2025} title="Top 10 FMGE Achievers 2025" /></section>
-      <section id="fmge2024"> <Top10Slider students={topStudent2024} title="Top 10 FMGE Achievers 2024"/></section>
-      <section id="fmge2023"><Top10Slider students={topStudent2023} title="Top 10 FMGE Achievers 2023"/></section>
+      <section id="fmge2026" data-aos="fade-up" data-aos-delay="100"><Top10Slider students={topStudent2026} title="Top 10 FMGE Achievers 2026" /></section>
+      <section id="fmge2025" data-aos="fade-up" data-aos-delay="100"><Top10Slider students={topStudent2025} title="Top 10 FMGE Achievers 2025" /></section>
+      <section id="fmge2024" data-aos="fade-up" data-aos-delay="100"> <Top10Slider students={topStudent2024} title="Top 10 FMGE Achievers 2024"/></section>
+      <section id="fmge2023" data-aos="fade-up" data-aos-delay="100"><Top10Slider students={topStudent2023} title="Top 10 FMGE Achievers 2023"/></section>
     </div>
     </section>
   )

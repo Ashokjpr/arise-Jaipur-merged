@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 function ContactUs() {
   return (
     <> 
-      <div className="relative bg-linear-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff]">
+      <div className="relative bg-linear-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff] ">
         <div className="relative flex  items-start justify-center contact-banner">
           <Image
             className="w-full "
@@ -73,7 +73,7 @@ function ContactUs() {
         </div>
       </div>
 
-      <section className="py-2 md:py-16 bg-white">
+      <section className="py-2 md:py-16 bg-white overflow-hidden">
         {/* HEADING */}
         <div className="text-center max-w-3xl mx-auto md:mb-12 px-4">
           <h2 className="text-2xl md:text-4xl font-bold mb-3" data-aos="fade-left"
