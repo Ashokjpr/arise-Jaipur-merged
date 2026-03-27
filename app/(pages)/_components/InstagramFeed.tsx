@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export default function InstagramFeed() {
   return (
-    <section className="w-full max-w-7xl bg-gradient-to-r from-gray-50 to-white overflow-hidden">      
+    <section className="w-full max-w-7xl mx-auto bg-gradient-to-r from-gray-50 to-white overflow-hidden">      
       {/* Load Elfsight Script */}
       <Script
         src="https://apps.elfsight.com/p/platform.js"

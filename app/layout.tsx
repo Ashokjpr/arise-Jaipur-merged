@@ -99,7 +99,7 @@ export default function RootLayout({
             ></div>
 
             {/* RIGHT BORDER */}
-            <div
+             <div
               className="
                 absolute right-0 top-0 h-full 
                 w-[8px] sm:w-[15px] lg:w-[25px]
@@ -110,7 +110,7 @@ export default function RootLayout({
             ></div>
 
             {/* MAIN CONTENT WITH PADDING */}
-            <main className="flex-1 bg-white text-gray-600 px-[8px] sm:px-[15px] lg:px-[25px]">
+            <main className="flex-1 bg-white text-gray-600">
               {children}
             </main>
 
