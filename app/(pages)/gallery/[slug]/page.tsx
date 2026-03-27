@@ -108,7 +108,7 @@ export default async function Gallery({
   if (!gallery) notFound();
 
   return (
-    <div className="relative bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff]">
+    <div className="relative bg-linear-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff]">
           <div className="relative flex  items-start justify-center blog-banner">
             <Image
                     className="w-full "
