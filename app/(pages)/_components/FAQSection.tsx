@@ -95,9 +95,9 @@ export default function Faqs() {
   };
 
   return (
-    <section className="pb-10 mt-25 bg-white">
+    <section className="pb-10 md:mt-15 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold text-blue-900 mb-8">
+        <h2 className="text-3xl md:text-4xl font-semibold text-blue-900 my-4 text-center">
           FAQs
         </h2>
 

@@ -20,7 +20,7 @@ export default function FacultyCard({ name, subject, image }) {
         </div>
 
         {/* Doctor Image */}
-        <div className="relative z-3 w-30 h-40 -mt-3 mx-auto rounded-2xl overflow-hidden ">
+        <div className="relative z-3 w-30 h-40 -mt-2.5 mx-auto rounded-2xl overflow-hidden ">
           <Image
             src={image}
             // src="/images/DrKhaleel2.png"

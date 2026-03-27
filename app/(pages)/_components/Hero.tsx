@@ -29,9 +29,11 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-[240px] sm:max-w-none mx-auto">
+          <Link href="/success-story" className="w-full sm:w-auto">
           <button className="w-full sm:w-auto bg-blue-600 px-4 py-3 md:px-6 md:py-3 rounded-lg hover:bg-blue-700 transition">
-            View Courses
+           Success Story
           </button>
+          </Link>
           <Link href="/register" className="w-full sm:w-auto">
             <button className="w-full bg-white text-blue-600 px-4 py-3 md:px-6 md:py-3 rounded-lg hover:bg-gray-200 transition">
               Register Now
