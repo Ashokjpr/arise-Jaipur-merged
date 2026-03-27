@@ -24,7 +24,7 @@ export default function Top10Slider({
     <section className="py-4 bg-blue-50">
       <div className=" max-w-7xl mx-auto">
 
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-blue-900 mb-10">
+        <h2 className="text-xl md:text-4xl font-semibold text-center text-blue-900 mb-5 md:mb-10">
           {title}
         </h2>
 

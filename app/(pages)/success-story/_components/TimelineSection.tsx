@@ -30,7 +30,7 @@ const steps = [
 export default function MedicalSuccessStatus() {
 
   return (
-    <section className="w-full bg-gradient-to-b from-blue-50 to-white py-16 px-4 sm:px-8 lg:px-16">
+    <section className="w-full bg-gradient-to-b from-blue-50 to-white py-5 md:py-16 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">

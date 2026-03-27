@@ -40,8 +40,8 @@ function GalleryCard({
       {/* Hover overlay */}
       <div
         className="absolute inset-0 flex flex-col items-center justify-center
-  bg-black/50 opacity-0 transition-opacity duration-300
-  group-hover:opacity-100 pointer"
+                  bg-black/50 opacity-100 md:opacity-0 transition-opacity duration-300
+                  group-hover:opacity-100 pointer"
       >
         <h2 className="text-white font-bold text-xl mb-3 text-center px-2">
           {title}
@@ -49,7 +49,7 @@ function GalleryCard({
 
         <button
           className="px-5 py-2 bg-white text-black text-sm font-semibold
-    rounded-full shadow-md hover:bg-gray-100 transition"
+                      rounded-full shadow-md hover:bg-gray-100 transition"
         >
           View More
         </button>
