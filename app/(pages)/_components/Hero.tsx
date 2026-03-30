@@ -36,7 +36,7 @@ export default function Hero() {
            Success Story
           </button>
           </Link>
-          <Link href="/register" className="w-full sm:w-auto"  data-aos="fade-right" data-aos-delay="200">
+          <Link href="https://registerjaipur.arisemedicalacademy.com/" className="w-full sm:w-auto"  data-aos="fade-right" data-aos-delay="200">
             <button className="w-full bg-white text-blue-600 px-4 py-3 md:px-6 md:py-3 rounded-lg hover:bg-gray-200 transition">
               Register Now
             </button>

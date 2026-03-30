@@ -43,10 +43,10 @@ export default function MissionVision() {
             </div>
 
             <ul className="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
-              <li>Our mission is to be recognized as the best FMGE Institute around the globe.</li>
-              <li>To Provide high quality medical education.</li>
-              <li>To provide 0 to 100% facilities under a roof for better support to students.</li>
-              <li>Arise  Jaipur have An Eco-System which is beneficial for students and peaceful environment.</li>
+              <li>Our mission is to become a globally recognized leader in FMGE coaching.</li>
+              <li>We are committed to delivering high-quality, result-oriented medical education.</li>
+              <li>We provide comprehensive facilities under one roof to ensure complete student support.</li>
+              <li>Arise Jaipur offers a holistic ecosystem with a peaceful and growth-oriented environment for students.</li>
             </ul>
           </div>
         </div>

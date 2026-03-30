@@ -47,7 +47,7 @@ const faqs = [
       <>
         You can enroll by visiting our website and filling out the 
         <a 
-          href="/register"
+          href="https://registerjaipur.arisemedicalacademy.com/"
           className="text-blue-600 font-semibold hover:underline"
           > Enrollment form</a>, or contact us directly at{" "}
         <a

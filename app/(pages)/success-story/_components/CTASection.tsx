@@ -13,7 +13,7 @@ export default function CTASection() {
       <p className="mb-8 text-lg opacity-90 max-w-2xl mx-auto">
         Join Arise Medical Academy Jaipur and start your journey toward FMGE.
       </p>
-      <Link href="/register">
+      <Link href="https://registerjaipur.arisemedicalacademy.com/">
       <button className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition duration-300">
         Register Now
       </button>
