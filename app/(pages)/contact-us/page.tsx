@@ -68,7 +68,7 @@ function ContactUs() {
             height={300}
           />
           <div className="overlay container">
-            <h2 className="text-white mx-auto md:ms-25 text-xl md:text-6xl ">Contact Us</h2>
+            <h2 className="text-white ms-10 md:ms-25 text-2xl md:text-6xl ">Contact Us</h2>
           </div>
         </div>
       </div>

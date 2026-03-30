@@ -4,7 +4,7 @@ export const fmgeRegularCourse = {
     title: "FMGE Regular Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
@@ -34,7 +34,7 @@ export const fmgeRegularOnlineCourse = {
     title: "FMGE Regular Online Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
@@ -62,7 +62,7 @@ export const fmgeSemiRegularOnlineCourse = {
     title: "FMGE Semi Regular Online Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
@@ -92,7 +92,7 @@ export const fmgeSemiRegularCourse = {
     title: "FMGE Semi Regular Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
@@ -123,7 +123,7 @@ export const fmgeTestDiscussionCourse = {
     title: "FMGE Test & Discussion Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
@@ -147,7 +147,7 @@ export const fmgeRapidRevisionCourse = {
     title: "FMGE Rapid Revision Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
@@ -172,7 +172,7 @@ export const fmgeVacationalCourse = {
     title: "FMGE Vacational Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
@@ -198,7 +198,7 @@ export const qrfFmgeCourse = {
     title: "QRF FMGE Course",
     cta: {
       label: "Register Now",
-      link: "/register"
+      link: "https://registerjaipur.arisemedicalacademy.com/"
     }
   },
 
