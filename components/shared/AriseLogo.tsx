@@ -1,6 +1,5 @@
 //  in this ARISE  MEDICAL ACADEMY BUILDING  BETTER DOCTORS is text
 
-
 import Image from "next/image";
 
 export default function AriseLogo() {

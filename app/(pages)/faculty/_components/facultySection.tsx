@@ -95,7 +95,7 @@ export default function FacultyPage() {
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-0">
           <h1 className="text-4xl sm:text-5xl font-bold text-blue-900"
            data-aos="fade-up">
             OUR FACULTY
