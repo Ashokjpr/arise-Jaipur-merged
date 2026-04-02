@@ -16,9 +16,11 @@ const images = [
   "/assets/collage-img/img-9.webp",
 ];
 
-function Collage() {
+ function Collage({ images }: { images: string[] }) {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(0);
+
+// console.log('collage images',images);
 
   const openModal = (index: number) => {
     setCurrent(index);

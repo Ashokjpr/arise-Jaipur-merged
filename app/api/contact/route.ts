@@ -29,23 +29,23 @@ export async function POST(req: Request) {
       `;
 
     //  3. Send WhatsApp via Axios
-    // await axios.post(
-    //   `https://graph.facebook.com/v19.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`,
-    //   {
-    //     messaging_product: "whatsapp",
-    //     to: process.env.WHATSAPP_TO,
-    //     type: "text",
-    //     text: {
-    //       body: whatsappMessage,
-    //     },
-    //   },
-    //   {
-    //     headers: {
-    //       Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`,
-    //       "Content-Type": "application/json",
-    //     },
-    //   }
-    // );
+    await axios.post(
+      `https://graph.facebook.com/v22.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`,
+      {
+        messaging_product: "whatsapp",
+        to: process.env.WHATSAPP_TO,
+        type: "text",
+        text: {
+          body: whatsappMessage,
+        },
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     return NextResponse.json(
       { success: true, message: "Message received successfully" },

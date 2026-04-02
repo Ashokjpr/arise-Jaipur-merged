@@ -1,9 +1,11 @@
+
 import { notFound } from "next/navigation";
 import "../../blog/_components/style.css";
 import Image from "next/image";
 import { getGalleryBySlug } from "../_data/gallery";
 import Collage from "./_components/collage";
 import type { Metadata } from "next";
+import { use } from "react";
 
 /* ---------------- METADATA ---------------- */
 export async function generateMetadata({
@@ -104,6 +106,7 @@ export default async function Gallery({
 }) {
   const { slug } = await params; // ✅ unwrap
   const gallery = getGalleryBySlug(slug);
+  const images = gallery?.images || [];
 // console.log('gallery data',gallery);
   if (!gallery) notFound();
 
@@ -122,7 +125,7 @@ export default async function Gallery({
                   </div>
             
           </div>
-         <Collage></Collage>
+         <Collage images={images} />
         </div>
   );
 }
