@@ -105,5 +105,6 @@ export default function FeaturesSection() {
 
       </div>
     </section>
+    
   );
 }

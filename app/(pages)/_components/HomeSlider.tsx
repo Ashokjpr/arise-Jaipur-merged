@@ -23,7 +23,7 @@ export default function WebsiteSlider() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  },[]);
 
   const nextSlide = () => {
     setActive((prev) => (prev + 1) % slides.length);
